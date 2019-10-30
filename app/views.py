@@ -34,7 +34,7 @@ def result_search():
 
 @app.route('/profile/<string:title>', methods=["GET"])
 def profile():
-    complement = request.args.get['title']
+    complement = request.args.get('title')
     url = request.get("https://scholar.google.com"+complement)
     bsObj = BeautifulSoup(url.content, "html.parser")
     perfil = bsObj.findAll("div", {"id": "gsc_prf_i"})
