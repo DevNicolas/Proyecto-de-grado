@@ -3,7 +3,7 @@ from app import app
 import requests
 from bs4 import BeautifulSoup
 
-@app.route('/')
+@app.route('/', methods=["GET"] )
 def index():
 
     return render_template('index.html')
