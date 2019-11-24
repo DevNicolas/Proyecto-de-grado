@@ -1,2 +1,2 @@
-web: gunicorn views:app
+web: python __init__.py
 
